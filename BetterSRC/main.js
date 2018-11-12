@@ -2,8 +2,11 @@ iDontWantToSeeTwitchEveryTimeILoginThanks();
 
 function iDontWantToSeeTwitchEveryTimeILoginThanks() {
   if (window.location.href === "https://www.speedrun.com/" || window.location.href === "http://www.speedrun.com/") {
-    document.getElementById('twitch').remove();
-    document.getElementsByClassName('panel')[0].style.marginTop = '-40px';
+    const twitchPanel = document.getElementById('twitch')  
+    if (twitchPanel) {
+      twitchPanel.remove();
+      document.getElementsByClassName('panel')[0].style.marginTop = '-40px';
+    }
   }
 }
 
