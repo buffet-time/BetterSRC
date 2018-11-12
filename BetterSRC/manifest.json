@@ -1,0 +1,16 @@
+{
+  "name": "BetterSRC",
+  "version": "1.0",
+  "description": "Removes pointless annoying things from Speedrun.com",
+  "browser_action": {
+      "default_title": "BetterSRC",
+      "default_icon": "icon.png"
+  },
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["*://*.speedrun.com/*"],
+      "js": ["main.js"]
+    }
+  ]
+}
